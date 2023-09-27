@@ -37,7 +37,7 @@ const Nav = () => {
               {/* Changing nav text link based on if the user has logged in. Login if not login is authenticated. Logout if a user is logged in. logout link uses onclick from auth context for logout */}
               {!isAuthenticated ? (
                 <li className="p-4">
-                  <Link to="/login" className="nav-link">
+                  <Link to="/" className="nav-link">
                     Login
                   </Link>
                 </li>
@@ -45,7 +45,7 @@ const Nav = () => {
                 <>
                   {/* Adding dashboard to navigation if user goes back to homepage. */}
                   <li className="p-4">
-                    <Link to="/app" className="nav-link">
+                    <Link to="/dashboard" className="nav-link">
                       Dashboard
                     </Link>
                   </li>
@@ -87,7 +87,7 @@ const Nav = () => {
             <>
               {/* Adding dashboard to navigation if user goes back to homepage. */}
               <li className="border-b-2 border-zinc-300 w-full p-4">
-                <Link to="/app" onClick={handleClose}>
+                <Link to="/dashboard" onClick={handleClose}>
                   Dashboard
                 </Link>
               </li>

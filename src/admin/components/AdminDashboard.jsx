@@ -1,5 +1,10 @@
+import DashboardHeader from "./DashboardHeader";
+
 export default function AdminDashboard() {
   return (
-    <div>AdminDashboard</div>
+    <>
+      <DashboardHeader />
+      <div>AdminDashboard</div>
+    </>
   )
 }
