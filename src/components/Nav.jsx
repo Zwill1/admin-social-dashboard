@@ -23,7 +23,7 @@ const Nav = () => {
                 to="/"
                 className="font-bold mr-4 text-2xl sm:text-3xl md:text-4xl uppercase text-black"
               >
-                Dashboard
+                Social Dash
               </Link>
             </h1>
           </div>
