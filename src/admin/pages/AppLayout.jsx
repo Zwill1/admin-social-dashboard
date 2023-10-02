@@ -1,5 +1,5 @@
 import Nav from "../../components/Nav";
-import Footer from "../../components/Footer";
+//import Footer from "../../components/Footer";
 import AdminDashboard from "../components/AdminDashboard";
 
 export default function AppLayout() {
@@ -7,7 +7,7 @@ export default function AppLayout() {
     <>
       <Nav />
       <AdminDashboard />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
