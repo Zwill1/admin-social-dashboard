@@ -22,14 +22,14 @@ export default function AdminDashboard() {
   return (
     <>
       <section className="w-full text-center pt-10">
-        <DashboardHeader followersTotal={getTotalFollower} />
+        <DashboardHeader color="dark-mode" followersTotal={getTotalFollower} />
       </section>
       <section>
         <div className="w-10/12 mx-auto flex justify-between pt-10 pb-10">
-          <SocialCard dataName={data[0].instagram_name} dataId={data[0].instagram_id} dataFollowers={data[0].instagram_followers} bgcolor="bg-gray-600" width="w-full" center="text-center" />
-          <SocialCard dataName={data[0].youtube_name} dataId={data[0].youtube_id} dataFollowers={data[0].youtube_followers} bgcolor="bg-gray-200" width="w-full" center="text-center" />
-          <SocialCard dataName={data[0].twitter_name} dataId={data[0].twitter_id} dataFollowers={data[0].twitter_followers} bgcolor="bg-gray-400" width="w-full" center="text-center" />
-          <SocialCard dataName={data[0].facebook_name} dataId={data[0].facebook_id} dataFollowers={data[0].facebook_followers} bgcolor="bg-gray-100" width="w-full" center="text-center" />
+          <SocialCard dataName={data[0].instagram_name} dataId={data[0].instagram_id} dataFollowers={data[0].instagram_followers} bgcolor="instagram-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <SocialCard dataName={data[0].youtube_name} dataId={data[0].youtube_id} dataFollowers={data[0].youtube_followers} bgcolor="youtube-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <SocialCard dataName={data[0].twitter_name} dataId={data[0].twitter_id} dataFollowers={data[0].twitter_followers} bgcolor="twitter-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <SocialCard dataName={data[0].facebook_name} dataId={data[0].facebook_id} dataFollowers={data[0].facebook_followers} bgcolor="fb-bg-color" color="dark-mode" width="w-full" center="text-center" />
         </div>
       </section>
     </>
