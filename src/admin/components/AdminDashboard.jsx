@@ -38,11 +38,17 @@ export default function AdminDashboard() {
         <OverviewHeader color="dark-mode" />
       </section>
       <section>
-        <div className="w-10/12 mx-auto flex justify-between pt-10 pb-10">
-          <OverviewCard bgcolor="fb-bg-color" color="dark-mode" width="w-full" center="text-center" />
-          <OverviewCard bgcolor="fb-bg-color" color="dark-mode" width="w-full" center="text-center" />
-          <OverviewCard bgcolor="fb-bg-color" color="dark-mode" width="w-full" center="text-center" />
-          <OverviewCard bgcolor="fb-bg-color" color="dark-mode" width="w-full" center="text-center" />
+        <div className="w-10/12 mx-auto flex justify-between pt-5 pb-5">
+          <OverviewCard dataId={data[0].instagram_id} pageview={data[0].instagram_profile_views} bgcolor="instagram-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <OverviewCard dataId={data[0].instagram_id} pagelike={data[0].instagram_like} bgcolor="instagram-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <OverviewCard dataId={data[0].youtube_id} pageview={data[0].youtube_total_views} bgcolor="youtube-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <OverviewCard dataId={data[0].youtube_id} pagelike={data[0].youtube_like} bgcolor="youtube-bg-color" color="dark-mode" width="w-full" center="text-center" />
+        </div>
+        <div className="w-10/12 mx-auto flex justify-between pt-5 pb-5">
+          <OverviewCard dataId={data[0].twitter_id} pageview={data[0].twitter_retweets} bgcolor="twitter-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <OverviewCard dataId={data[0].twitter_id} pagelike={data[0].twitter_like} bgcolor="twitter-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <OverviewCard dataId={data[0].facebook_id} pageview={data[0].facebook_page_views} bgcolor="fb-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <OverviewCard dataId={data[0].facebook_id} pagelike={data[0].facebook_like} bgcolor="fb-bg-color" color="dark-mode" width="w-full" center="text-center" />
         </div>
       </section>
     </>
