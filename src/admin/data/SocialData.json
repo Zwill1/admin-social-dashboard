@@ -5,20 +5,24 @@
     "instagram_followers": 10277,
     "instagram_profile_views": 52,
     "instagram_like": 230,
+    "instagram_yesterday_likes": 150,
     "youtube_id": 16545433,
     "youtube_name": "@youtube_Name",
     "youtube_followers": 12223,
     "youtube_total_views": 5345452,
     "youtube_like": 50650,
+    "youtube_yesterday_likes": 55125,
     "twitter_id": 165223255295,
     "twitter_name": "@twitter_Name",
     "twitter_followers": 2504,
     "twitter_retweets": 8705,
     "twitter_like": 300520,
+    "twitter_yesterday_likes": 200520,
     "facebook_id": 16571806895,
     "facebook_name": "@facebook_Name",
     "facebook_followers": 1865,
     "facebook_page_views": 10535,
-    "facebook_like": 5043
+    "facebook_like": 5043,
+    "facebook_yesterday_likes": 5623
   }
 ]
