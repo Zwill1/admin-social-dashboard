@@ -28,10 +28,10 @@ export default function AdminDashboard() {
       </section>
       <section>
         <div className="w-10/12 mx-auto flex justify-between pt-10 pb-10">
-          <SocialCard dataName={data[0].instagram_name} dataId={data[0].instagram_id} dataFollowers={data[0].instagram_followers} bgcolor="instagram-bg-color" color="dark-mode" width="w-full" center="text-center" />
-          <SocialCard dataName={data[0].youtube_name} dataId={data[0].youtube_id} dataFollowers={data[0].youtube_followers} bgcolor="youtube-bg-color" color="dark-mode" width="w-full" center="text-center" />
-          <SocialCard dataName={data[0].twitter_name} dataId={data[0].twitter_id} dataFollowers={data[0].twitter_followers} bgcolor="twitter-bg-color" color="dark-mode" width="w-full" center="text-center" />
-          <SocialCard dataName={data[0].facebook_name} dataId={data[0].facebook_id} dataFollowers={data[0].facebook_followers} bgcolor="fb-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <SocialCard dataName={data[0].instagram_name} dataId={data[0].instagram_id} dataFollowers={data[0].instagram_followers} dataPrevFollowers={data[0].instagram_prev_day_followers} bgcolor="instagram-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <SocialCard dataName={data[0].youtube_name} dataId={data[0].youtube_id} dataFollowers={data[0].youtube_followers} dataPrevFollowers={data[0].youtube_prev_day_followers} bgcolor="youtube-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <SocialCard dataName={data[0].twitter_name} dataId={data[0].twitter_id} dataFollowers={data[0].twitter_followers} dataPrevFollowers={data[0].twitter_prev_day_followers} bgcolor="twitter-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <SocialCard dataName={data[0].facebook_name} dataId={data[0].facebook_id} dataFollowers={data[0].facebook_followers} dataPrevFollowers={data[0].facebook_prev_day_followers} bgcolor="fb-bg-color" color="dark-mode" width="w-full" center="text-center" />
         </div>
       </section>
       <section className="w-full text-center pt-10">
@@ -39,15 +39,15 @@ export default function AdminDashboard() {
       </section>
       <section>
         <div className="w-10/12 mx-auto flex justify-between pt-5 pb-5">
-          <OverviewCard dataId={data[0].instagram_id} pageview={data[0].instagram_profile_views} bgcolor="instagram-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <OverviewCard dataId={data[0].instagram_id} pageview={data[0].instagram_profile_views} pageviewyesterday={data[0].instagram_yesterday_views} bgcolor="instagram-bg-color" color="dark-mode" width="w-full" center="text-center" />
           <OverviewCard dataId={data[0].instagram_id} pagelike={data[0].instagram_like} pageyesterdaylike={data[0].instagram_yesterday_likes} bgcolor="instagram-bg-color" color="dark-mode" width="w-full" center="text-center" />
-          <OverviewCard dataId={data[0].youtube_id} pageview={data[0].youtube_total_views} bgcolor="youtube-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <OverviewCard dataId={data[0].youtube_id} pageview={data[0].youtube_total_views} pageviewyesterday={data[0].youtube_yesterday_views} bgcolor="youtube-bg-color" color="dark-mode" width="w-full" center="text-center" />
           <OverviewCard dataId={data[0].youtube_id} pagelike={data[0].youtube_like} pageyesterdaylike={data[0].youtube_yesterday_likes} bgcolor="youtube-bg-color" color="dark-mode" width="w-full" center="text-center" />
         </div>
         <div className="w-10/12 mx-auto flex justify-between pt-5 pb-5">
-          <OverviewCard dataId={data[0].twitter_id} pageview={data[0].twitter_retweets} bgcolor="twitter-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <OverviewCard dataId={data[0].twitter_id} pageview={data[0].twitter_retweets} pageviewyesterday={data[0].twitter_yesterday_retweets} bgcolor="twitter-bg-color" color="dark-mode" width="w-full" center="text-center" />
           <OverviewCard dataId={data[0].twitter_id} pagelike={data[0].twitter_like} pageyesterdaylike={data[0].twitter_yesterday_likes} bgcolor="twitter-bg-color" color="dark-mode" width="w-full" center="text-center" />
-          <OverviewCard dataId={data[0].facebook_id} pageview={data[0].facebook_page_views} bgcolor="fb-bg-color" color="dark-mode" width="w-full" center="text-center" />
+          <OverviewCard dataId={data[0].facebook_id} pageview={data[0].facebook_page_views} pageviewyesterday={data[0].facebook_yesterday_views} bgcolor="fb-bg-color" color="dark-mode" width="w-full" center="text-center" />
           <OverviewCard dataId={data[0].facebook_id} pagelike={data[0].facebook_like} pageyesterdaylike={data[0].facebook_yesterday_likes} bgcolor="fb-bg-color" color="dark-mode" width="w-full" center="text-center" />
         </div>
       </section>
