@@ -27,25 +27,25 @@ export default function OverviewCard({bgcolor, color, width, center, dataId, pag
           <div>
           <span>
           {dataId == 1653345695 &&
-            <InstagramIcon />
+            <InstagramIcon className='instagram-icon-color' />
           }
           {dataId == 16545433 &&
-            <YouTubeIcon />
+            <YouTubeIcon className='youtube-icon-color' />
           }
           {dataId == 165223255295 &&
-            <TwitterIcon />
+            <TwitterIcon className='twitter-icon-color' />
           }
           {dataId == 16571806895 &&
-            <FacebookIcon />
+            <FacebookIcon className='fb-icon-color' />
           }</span>
           </div>
         </div>
         <div className="mt-1 flex justify-around pt-2">
           <div className='text-3xl font-semibold'>{pageview}{pagelike}</div>
           {/* <div className='text-3xl font-semibold'>{pageyesterdaylike && <p>{pagelike - pageyesterdaylike}</p>}</div> */}
-          {pageviewyesterday && <div className='text-1xl font-semibold'>{totalViewOutput < 0 ? <p className='text-red-600 bg-white p-1'>{totalViewOutput}</p> : <p className='text-blue-600 bg-white p-1'>+{totalViewOutput}</p>}</div>}
+          {pageviewyesterday && <div className='text-1xl font-semibold'>{totalViewOutput < 0 ? <p className='negative-rating'>{totalViewOutput}</p> : <p className='positive-rating'>+{totalViewOutput}</p>}</div>}
           
-          {pageyesterdaylike && <div className='text-1xl font-semibold'>{totalLikesOutput < 0 ? <p className='text-red-600 bg-white p-1'>{totalLikesOutput}</p> : <p className='text-blue-600 bg-white p-1'>+{totalLikesOutput}</p>}</div>}
+          {pageyesterdaylike && <div className='text-1xl font-semibold'>{totalLikesOutput < 0 ? <p className='negative-rating'>{totalLikesOutput}</p> : <p className='positive-rating'>+{totalLikesOutput}</p>}</div>}
         </div>
         </div>
     </>

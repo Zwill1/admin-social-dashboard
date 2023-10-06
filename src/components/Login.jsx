@@ -25,7 +25,7 @@ export default function Login() {
 
   return (
     <>
-      <main className="bg-gray-600 h-screen flex">
+      <main className="h-screen flex">
         <div className="mx-auto container items-center justify-center flex">
           <form
             onSubmit={handleSubmit}

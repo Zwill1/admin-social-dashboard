@@ -2,20 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-.fb-bg-color {
-    background-color: #3b5998
+.fb-icon-color{
+    color: #3b5998;
 }
 
-.instagram-bg-color {
-    background-color: #d62976
+.instagram-icon-color{
+    color: #d62976;
 }
 
-.twitter-bg-color {
-    background-color: #1DA1F2
+.twitter-icon-color{
+    color: #1DA1F2;
 }
 
-.youtube-bg-color {
-    background-color: #c4302b
+.youtube-icon-color{
+    color: #c4302b;
+}
+
+.fb-border-color {
+    /* background-color: #3b5998; */
+    border-top: 4px solid #3b5998;
+}
+
+.instagram-border-color {
+    /* background-color: #d62976; */
+    border-top: 4px solid #d62976;
+}
+
+.twitter-border-color {
+    /* background-color: #1DA1F2; */
+    border-top: 4px solid #1DA1F2;
+}
+
+.youtube-border-color {
+    /* background-color: #c4302b; */
+    border-top: 4px solid #c4302b;
 }
 
 .light-mode {
@@ -26,6 +46,19 @@
     color: #fff;
 }
 
+.dark-mode-card-bg {
+    background-color: #262b42;
+}
+
 body {
-    background-color: #4A556B;
+    /* background-color: #4A556B; */
+    background-color: #1d202b;
+}
+
+.positive-rating {
+    color: #4e8b8d;
+}
+
+.negative-rating {
+    color: #d8435e;
 }
