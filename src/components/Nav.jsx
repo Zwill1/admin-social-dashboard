@@ -15,7 +15,7 @@ const Nav = () => {
 
   return (
     <>
-      <section className="bg-gray-200 text-black">
+      <section className="bg-white text-black">
         <div className="flex justify-between md:w-full h-14 w-10/12 mx-auto container items-center">
           <div>
             <h1 className="flex">
