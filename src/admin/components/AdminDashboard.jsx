@@ -39,16 +39,16 @@ export default function AdminDashboard() {
       </section>
       <section>
         <div className="w-10/12 mx-auto flex justify-between pt-5 pb-5">
-          <OverviewCard dataId={data[0].instagram_id} pageview={data[0].instagram_profile_views} pageviewyesterday={data[0].instagram_yesterday_views} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" />
-          <OverviewCard dataId={data[0].instagram_id} pagelike={data[0].instagram_like} pageyesterdaylike={data[0].instagram_yesterday_likes} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" />
-          <OverviewCard dataId={data[0].youtube_id} pageview={data[0].youtube_total_views} pageviewyesterday={data[0].youtube_yesterday_views} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" />
-          <OverviewCard dataId={data[0].youtube_id} pagelike={data[0].youtube_like} pageyesterdaylike={data[0].youtube_yesterday_likes} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" />
+          <OverviewCard dataId={data[0].instagram_id} pageview={data[0].instagram_profile_views} pageviewyesterday={data[0].instagram_yesterday_views} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" border="instagram-border-color" />
+          <OverviewCard dataId={data[0].instagram_id} pagelike={data[0].instagram_like} pageyesterdaylike={data[0].instagram_yesterday_likes} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" border="instagram-border-color" />
+          <OverviewCard dataId={data[0].youtube_id} pageview={data[0].youtube_total_views} pageviewyesterday={data[0].youtube_yesterday_views} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" border="youtube-border-color" />
+          <OverviewCard dataId={data[0].youtube_id} pagelike={data[0].youtube_like} pageyesterdaylike={data[0].youtube_yesterday_likes} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" border="youtube-border-color" />
         </div>
         <div className="w-10/12 mx-auto flex justify-between pt-5 pb-5">
-          <OverviewCard dataId={data[0].twitter_id} pageview={data[0].twitter_retweets} pageviewyesterday={data[0].twitter_yesterday_retweets} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" />
-          <OverviewCard dataId={data[0].twitter_id} pagelike={data[0].twitter_like} pageyesterdaylike={data[0].twitter_yesterday_likes} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" />
-          <OverviewCard dataId={data[0].facebook_id} pageview={data[0].facebook_page_views} pageviewyesterday={data[0].facebook_yesterday_views} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" />
-          <OverviewCard dataId={data[0].facebook_id} pagelike={data[0].facebook_like} pageyesterdaylike={data[0].facebook_yesterday_likes} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" />
+          <OverviewCard dataId={data[0].twitter_id} pageview={data[0].twitter_retweets} pageviewyesterday={data[0].twitter_yesterday_retweets} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" border="twitter-border-color" />
+          <OverviewCard dataId={data[0].twitter_id} pagelike={data[0].twitter_like} pageyesterdaylike={data[0].twitter_yesterday_likes} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" border="twitter-border-color" />
+          <OverviewCard dataId={data[0].facebook_id} pageview={data[0].facebook_page_views} pageviewyesterday={data[0].facebook_yesterday_views} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" border="fb-border-color" />
+          <OverviewCard dataId={data[0].facebook_id} pagelike={data[0].facebook_like} pageyesterdaylike={data[0].facebook_yesterday_likes} bgcolor="dark-mode-card-bg" color="dark-mode" width="w-full" center="text-center" border="fb-border-color" />
         </div>
       </section>
     </>

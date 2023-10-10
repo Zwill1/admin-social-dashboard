@@ -16,6 +16,7 @@ export default function OverviewCard({
   pageview,
   pageyesterdaylike,
   pageviewyesterday,
+  border
 }) {
   const overviewStyle =
     bgcolor +
@@ -25,6 +26,8 @@ export default function OverviewCard({
     width +
     " " +
     center +
+    " " +
+    border +
     " " +
     "pt-8 pb-8 mx-4 border-2 border-black";
   // console.log("this is the data " + dataId);
@@ -41,7 +44,21 @@ export default function OverviewCard({
   return (
     <>
       <div className={overviewStyle}>
-        <div className="mt-1 flex justify-around">
+        <div className="flex mt-1 mb-2">
+            {dataId == 1653345695 && (
+              <p className="text-center w-full text-2xl">Instagram Details</p>
+            )}
+            {dataId == 16545433 && (
+              <p className="text-center w-full text-2xl">Youtube Details</p>
+            )}
+            {dataId == 165223255295 && (
+              <p className="text-center w-full text-2xl">Twitter Details</p>
+            )}
+            {dataId == 16571806895 && (
+              <p className="text-center w-full text-2xl">Facebook Details</p>
+            )}
+        </div>
+        <div className="mt-2 flex justify-around">
           <div>
             {pageview && <p className="italic">Page Views</p>}
             {pagelike && <p className="italic">Likes</p>}
