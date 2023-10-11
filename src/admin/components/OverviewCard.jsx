@@ -30,14 +30,9 @@ export default function OverviewCard({
     border +
     " " +
     "pt-8 pb-8 mx-4 border-2 border-black";
-  // console.log("this is the data " + dataId);
-  // console.log("pageview: " + pageview);
-  // console.log("pagelike: " + pagelike);
-  // console.log("yesterday like " + pageyesterdaylike);
 
   const totalLikesOutput = pageyesterdaylike - pagelike;
   const totalViewOutput = pageview - pageviewyesterday;
-  // console.log("this is the total likes " + totalLikesOutput);
 
   console.log("lets see here " + pageviewyesterday);
 
@@ -85,7 +80,6 @@ export default function OverviewCard({
             {pageview}
             {pagelike}
           </div>
-          {/* <div className='text-3xl font-semibold'>{pageyesterdaylike && <p>{pagelike - pageyesterdaylike}</p>}</div> */}
           {pageviewyesterday && (
             <div className="text-1xl font-semibold">
               {totalViewOutput < 0 ? (

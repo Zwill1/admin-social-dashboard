@@ -29,7 +29,6 @@ export default function SocialCard({
     center +
     " " +
     "pt-8 pb-8 mx-4 border-2 border-black";
-  console.log("in the card " + dataName);
 
   const totalAdjustedFollowers = dataFollowers - dataPrevFollowers;
   return (
@@ -37,14 +36,14 @@ export default function SocialCard({
       <div>
         <span>
           {dataId == 1653345695 && (
-            <InstagramIcon className="instagram-icon-color" />
+            <div><InstagramIcon className="instagram-icon-color" /> / <span className="instagram-icon-color">{dataName}</span></div>
           )}
-          {dataId == 16545433 && <YouTubeIcon className="youtube-icon-color" />}
+          {dataId == 16545433 && 
+            <div><YouTubeIcon className="youtube-icon-color" /> / <span className="youtube-icon-color">{dataName}</span></div>}
           {dataId == 165223255295 && (
-            <TwitterIcon className="twitter-icon-color" />
+            <div><TwitterIcon className="twitter-icon-color" /> / <span className="twitter-icon-color">{dataName}</span></div>
           )}
-          {dataId == 16571806895 && <FacebookIcon className="fb-icon-color" />}{" "}
-          / {dataName}
+          {dataId == 16571806895 && <div><FacebookIcon className="fb-icon-color" /> / <span className="fb-icon-color">{dataName}</span></div>}
         </span>
       </div>
       <div className="mt-1">

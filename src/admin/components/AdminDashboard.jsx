@@ -17,10 +17,7 @@ export default function AdminDashboard() {
   if (error) console.log("there is an error " + error);
 
   const getTotalFollower = data[0].instagram_followers + data[0].youtube_followers + data[0].twitter_followers + data[0].facebook_followers;
-  console.log("total followers are " + getTotalFollower);
 
-  console.log("this is the data ", data);
-  console.log(data[0].facebook_name);
   return (
     <>
       <section className="w-full text-center pt-10">
