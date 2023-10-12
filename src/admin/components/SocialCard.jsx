@@ -1,4 +1,4 @@
-/* eslint react/prop-types: 0 */
+import PropTypes from 'prop-types';
 
 //icons
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -17,6 +17,7 @@ export default function SocialCard({
   dataFollowers,
   dataPrevFollowers,
 }) {
+
   const headerStyle =
     bgcolor +
     " " +
@@ -66,4 +67,16 @@ export default function SocialCard({
       </div>
     </div>
   );
+}
+
+SocialCard.propTypes = {
+  bgcolor: PropTypes.string.isRequired,
+  border: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  width: PropTypes.string.isRequired,
+  center: PropTypes.string.isRequired,
+  dataName: PropTypes.string.isRequired,
+  dataId:PropTypes.number.isRequired,
+  dataFollowers:PropTypes.number.isRequired,
+  dataPrevFollowers:PropTypes.number.isRequired
 }
