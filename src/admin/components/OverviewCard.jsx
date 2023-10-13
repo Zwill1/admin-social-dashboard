@@ -1,4 +1,4 @@
-/* eslint react/prop-types: 0 */
+import PropTypes from 'prop-types';
 
 //icons
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -103,4 +103,17 @@ export default function OverviewCard({
       </div>
     </>
   );
+}
+
+OverviewCard.propTypes = {
+  bgcolor: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  width: PropTypes.string.isRequired,
+  center: PropTypes.string.isRequired,
+  dataId: PropTypes.number.isRequired,
+  pagelike: PropTypes.number.isRequired,
+  pageview: PropTypes.number.isRequired,
+  pageyesterdaylike: PropTypes.number.isRequired,
+  pageviewyesterday: PropTypes.number.isRequired,
+  border: PropTypes.string.isRequired
 }

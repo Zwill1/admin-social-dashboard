@@ -1,4 +1,4 @@
-/* eslint react/prop-types: 0 */
+import PropTypes from 'prop-types';
 
 export default function OverviewHeader({color}) {
     const h2Header = "text-black text-3xl font-bold " + color;
@@ -9,4 +9,8 @@ export default function OverviewHeader({color}) {
     <p className={pHeaders}>See below for social media counts</p>   
   </>
   )
+}
+
+OverviewHeader.propTypes = {
+  color: PropTypes.string.isRequired
 }
