@@ -1,4 +1,4 @@
-/* eslint react/prop-types: 0 */
+import PropTypes from 'prop-types';
 
 import { createContext, useContext, useReducer } from "react";
 
@@ -56,4 +56,9 @@ function useAuth() {
   return context;
 }
 
+AuthProvider.propTypes = {
+  children: PropTypes.element.isRequired
+}
+
 export { AuthProvider, useAuth };
+

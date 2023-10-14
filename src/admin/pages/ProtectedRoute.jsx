@@ -1,4 +1,4 @@
-/* eslint react/prop-types: 0 */
+import PropTypes from 'prop-types';
 
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -18,6 +18,10 @@ function ProtectedRoute({ children }) {
   );
 
   return isAuthenticated ? children : null;
+}
+
+ProtectedRoute.propTypes = {
+  children: PropTypes.element.isRequired
 }
 
 export default ProtectedRoute;
