@@ -45,8 +45,8 @@ const Nav = () => {
                 </>
               ) : (
                 <>
-                  <li className="p-4">
-                      Welcome {user.name}!
+                  <li className="p-4 flex">
+                      <img src={user.avatar} className='rounded-full mr-3' style={{"width" : "25px"}} /> Welcome {user.name}!
                   </li>
                   {/* Adding dashboard to navigation if user goes back to homepage. */}
                   <li className="p-4">
