@@ -37,16 +37,16 @@ const Nav = () => {
                       Home
                     </Link>
                   </li>
-                  <li className="p-4">
+                  {/* <li className="p-4">
                     <Link to="/" className="nav-link">
                       Login
                     </Link>
-                  </li>
+                  </li> */}
                 </>
               ) : (
                 <>
                   <li className="p-4 flex">
-                      <img src={user.avatar} className='rounded-full mr-3' style={{"width" : "25px"}} /> Welcome {user.name}!
+                      <img src={user.avatar} className='rounded-full mr-3' style={{"width" : "25px"}} /> <span className="font-bold">Welcome {user.name}</span>!
                   </li>
                   {/* Adding dashboard to navigation if user goes back to homepage. */}
                   <li className="p-4">
