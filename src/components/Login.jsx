@@ -31,8 +31,9 @@ export default function Login() {
             onSubmit={handleSubmit}
             className="bg-gray-100 py-10 px-10 w-10/12 lg:w-1/2 rounded-2xl"
           >
+            <h1 className="text-center font-bold text-2xl md:text-3xl uppercase pb-2">Login with the form below:</h1>
             <div className="py-1 flex justify-between flex-wrap">
-              <label htmlFor="email" className="w-full lg:w-1/4">
+              <label htmlFor="email" className="w-full lg:w-1/4 font-semibold italic">
                 Email address:
               </label>
               <input
@@ -45,7 +46,7 @@ export default function Login() {
             </div>
 
             <div className="py-1 flex justify-between flex-wrap">
-              <label htmlFor="password" className="w-full lg:w-1/4">
+              <label htmlFor="password" className="w-full lg:w-1/4 font-semibold italic">
                 Password:
               </label>
               <input
