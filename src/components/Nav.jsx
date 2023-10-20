@@ -76,21 +76,26 @@ const Nav = () => {
             !nav ? "hidden" : "absolute bg-zinc-200 w-full px-8 lg:hidden z-50"
           }
         >
-          <li className="border-b-2 border-zinc-300 w-full p-4">
-            <Link to="/" onClick={handleClose}>
-              Home
-            </Link>
-          </li>
           {/* Changing nav text link based on if the user has logged in. Login if not login is authenticated. Logout if a user is logged in. logout link uses onclick from auth context for logout */}
           {!isAuthenticated ? (
-            <li className="border-b-2 border-zinc-300 w-full p-4">
-              <Link to="/login" onClick={handleClose}>
-                Login
-              </Link>
-            </li>
+            <>
+              <li className="border-b-2 border-zinc-300 w-full p-4">
+                <Link to="/" onClick={handleClose}>
+                  Home
+                </Link>
+              </li>
+              {/* <li className="border-b-2 border-zinc-300 w-full p-4">
+                <Link to="/login" onClick={handleClose}>
+                  Login
+                </Link>
+              </li> */}
+            </>
           ) : (
             <>
               {/* Adding dashboard to navigation if user goes back to homepage. */}
+              <li className="p-4 flex">
+                      <img src={user.avatar} className='rounded-full mr-3' style={{"width" : "25px"}} /> <span className="font-bold">Welcome {user.name}</span>!
+              </li>
               <li className="border-b-2 border-zinc-300 w-full p-4">
                 <Link to="/dashboard" onClick={handleClose}>
                   Dashboard

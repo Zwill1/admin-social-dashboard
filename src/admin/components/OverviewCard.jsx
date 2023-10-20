@@ -41,16 +41,16 @@ export default function OverviewCard({
       <div className={overviewStyle}>
         <div className="flex mt-1 mb-2">
             {dataId == 1653345695 && (
-              <p className="text-center w-full text-2xl">Instagram Details</p>
+              <p className="text-center w-full text-2xl"><InstagramIcon className="instagram-icon-color" /> Daily Numbers</p>
             )}
             {dataId == 16545433 && (
-              <p className="text-center w-full text-2xl">Youtube Details</p>
+              <p className="text-center w-full text-2xl"><YouTubeIcon className="youtube-icon-color" /> Daily Numbers</p>
             )}
             {dataId == 165223255295 && (
-              <p className="text-center w-full text-2xl">Twitter Details</p>
+              <p className="text-center w-full text-2xl"><TwitterIcon className="twitter-icon-color" /> Daily Numbers</p>
             )}
             {dataId == 16571806895 && (
-              <p className="text-center w-full text-2xl">Facebook Details</p>
+              <p className="text-center w-full text-2xl"><FacebookIcon className="fb-icon-color" /> Daily Numbers</p>
             )}
         </div>
         <div className="mt-2 flex justify-around">
@@ -61,16 +61,16 @@ export default function OverviewCard({
           <div>
             <span>
               {dataId == 1653345695 && (
-                <InstagramIcon className="instagram-icon-color" />
+                <>Difference</>
               )}
               {dataId == 16545433 && (
-                <YouTubeIcon className="youtube-icon-color" />
+                <>Difference</>
               )}
               {dataId == 165223255295 && (
-                <TwitterIcon className="twitter-icon-color" />
+                <>Difference</>
               )}
               {dataId == 16571806895 && (
-                <FacebookIcon className="fb-icon-color" />
+                <>Difference</>
               )}
             </span>
           </div>

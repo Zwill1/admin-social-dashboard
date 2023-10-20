@@ -23,14 +23,16 @@ export default function AdminDashboard() {
       <section className="w-full text-center pt-10">
         <DashboardHeader color="dark-mode" followersTotal={getTotalFollower} />
       </section>
-      <section>
-        <div className="w-10/12 mx-auto flex justify-between pt-10 pb-10">
+
+      {/* <section className=""> */}
+        <div className="w-10/12 mx-auto lg:flex justify-between pt-10 pb-10">
           <SocialCard dataName={data[0].instagram_name} dataId={data[0].instagram_id} dataFollowers={data[0].instagram_followers} dataPrevFollowers={data[0].instagram_prev_day_followers} bgcolor="dark-mode-card-bg" border="instagram-border-color" color="dark-mode" width="w-full" center="text-center" />
           <SocialCard dataName={data[0].youtube_name} dataId={data[0].youtube_id} dataFollowers={data[0].youtube_followers} dataPrevFollowers={data[0].youtube_prev_day_followers} bgcolor="dark-mode-card-bg" border="youtube-border-color" color="dark-mode" width="w-full" center="text-center" />
           <SocialCard dataName={data[0].twitter_name} dataId={data[0].twitter_id} dataFollowers={data[0].twitter_followers} dataPrevFollowers={data[0].twitter_prev_day_followers} bgcolor="dark-mode-card-bg" border="twitter-border-color" color="dark-mode" width="w-full" center="text-center" />
           <SocialCard dataName={data[0].facebook_name} dataId={data[0].facebook_id} dataFollowers={data[0].facebook_followers} dataPrevFollowers={data[0].facebook_prev_day_followers} bgcolor="dark-mode-card-bg" border="fb-border-color" color="dark-mode" width="w-full" center="text-center" />
         </div>
-      </section>
+      {/* </section> */}
+
       <section className="w-full text-center pt-10">
         <OverviewHeader color="dark-mode" />
       </section>
