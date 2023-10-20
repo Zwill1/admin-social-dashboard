@@ -18,6 +18,7 @@ export default function SocialCard({
   dataId,
   dataFollowers,
   dataPrevFollowers,
+  bottom
 }) {
 
   const headerStyle =
@@ -30,6 +31,8 @@ export default function SocialCard({
     width +
     " " +
     center +
+    " " +
+    bottom +
     " " +
     "pt-8 pb-8 mx-4 border-2 border-black";
 
@@ -99,5 +102,6 @@ SocialCard.propTypes = {
   dataName: PropTypes.string.isRequired,
   dataId:PropTypes.number.isRequired,
   dataFollowers:PropTypes.number.isRequired,
-  dataPrevFollowers:PropTypes.number.isRequired
+  dataPrevFollowers:PropTypes.number.isRequired,
+  bottom:PropTypes.string.isRequired
 }
