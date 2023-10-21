@@ -16,7 +16,8 @@ export default function OverviewCard({
   pageview,
   pageyesterdaylike,
   pageviewyesterday,
-  border
+  border,
+  bottom
 }) {
   const overviewStyle =
     bgcolor +
@@ -28,6 +29,8 @@ export default function OverviewCard({
     center +
     " " +
     border +
+    " " +
+    bottom +
     " " +
     "pt-8 pb-8 mx-4 border-2 border-black";
 
@@ -115,5 +118,6 @@ OverviewCard.propTypes = {
   pageview: PropTypes.number.isRequired,
   pageyesterdaylike: PropTypes.number.isRequired,
   pageviewyesterday: PropTypes.number.isRequired,
-  border: PropTypes.string.isRequired
+  border: PropTypes.string.isRequired,
+  bottom:PropTypes.string.isRequired
 }

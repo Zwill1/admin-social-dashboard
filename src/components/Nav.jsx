@@ -9,8 +9,10 @@ import { useAuth } from "../contexts/AuthContext";
 const Nav = () => {
   const [nav, setNav] = useState(false);
   const { user, logout, isAuthenticated } = useAuth();
-  const handleClick = () => setNav(!nav);
 
+  // const [darkMode, SetDarkMode] = useState(false);
+
+  const handleClick = () => setNav(!nav);
   const handleClose = () => setNav(!nav);
 
   return (
@@ -36,6 +38,9 @@ const Nav = () => {
                     <Link to="/" className="nav-link">
                       Home
                     </Link>
+                  </li>
+                  <li className="p-4">
+                      Darkmode
                   </li>
                   {/* <li className="p-4">
                     <Link to="/" className="nav-link">
