@@ -46,13 +46,17 @@
     color: #fff;
 }
 
+.darkModeBG {
+    background-color: #1d202b;
+}
+
 .dark-mode-card-bg {
     background-color: #262b42;
 }
 
 body {
     /* background-color: #4A556B; */
-    background-color: #1d202b;
+    /* background-color: #1d202b; */
 }
 
 .positive-rating {
@@ -62,3 +66,4 @@ body {
 .negative-rating {
     color: #d8435e;
 }
+

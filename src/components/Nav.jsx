@@ -10,10 +10,21 @@ const Nav = () => {
   const [nav, setNav] = useState(false);
   const { user, logout, isAuthenticated } = useAuth();
 
-  // const [darkMode, SetDarkMode] = useState(false);
+  const [darkMode, SetDarkMode] = useState(false);
 
   const handleClick = () => setNav(!nav);
   const handleClose = () => setNav(!nav);
+  
+  function toggleDarkMode(){
+    let getTag = document.querySelector("body");
+    getTag.classList.add("darkModeBG");
+    SetDarkMode(true);
+  } 
+  function toggleLightMode(){
+    let getTag = document.querySelector("body");
+    getTag.classList.remove("darkModeBG");
+    SetDarkMode(false);
+  } 
 
   return (
     <>
@@ -39,9 +50,11 @@ const Nav = () => {
                       Home
                     </Link>
                   </li>
-                  <li className="p-4">
-                      Darkmode
-                  </li>
+                    {!darkMode ? (
+                      <li className="p-4" onClick={toggleDarkMode}>Darkmode</li>
+                    ) : (
+                      <li className="p-4" onClick={toggleLightMode}>Lightmode</li>
+                    )}
                   {/* <li className="p-4">
                     <Link to="/" className="nav-link">
                       Login
@@ -64,6 +77,11 @@ const Nav = () => {
                       Logout
                     </Link>
                   </li>
+                  {!darkMode ? (
+                      <li className="p-4" onClick={toggleDarkMode}>Darkmode</li>
+                    ) : (
+                      <li className="p-4" onClick={toggleLightMode}>Lightmode</li>
+                    )}
                 </>
               )}
             </ul>
