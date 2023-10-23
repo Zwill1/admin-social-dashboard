@@ -38,6 +38,11 @@
     border-top: 4px solid #c4302b;
 }
 
+#main-header{
+    background-color: #f2f2f2;
+    color: #000;
+}
+
 .light-mode {
     color: #000;
 }
@@ -46,8 +51,13 @@
     color: #fff;
 }
 
-.darkModeBG {
+.darkModeBody {
     background-color: #1d202b;
+}
+
+.darkModeHeader {
+    background-color: #fff!important;
+    color: #000;
 }
 
 .dark-mode-card-bg {
@@ -67,3 +77,26 @@ body {
     color: #d8435e;
 }
 
+.loader {
+    width: 45px;
+    aspect-ratio: 0.75;
+    --c: no-repeat linear-gradient(theme(colors.stone.800) 0 0);
+    background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+    background-size: 20% 50%;
+    animation: loading 1s infinite linear;
+  }
+
+  @keyframes loading {
+    20% {
+      background-position: 0% 0%, 50% 50%, 100% 50%;
+    }
+    40% {
+      background-position: 0% 100%, 50% 0%, 100% 50%;
+    }
+    60% {
+      background-position: 0% 50%, 50% 100%, 100% 0%;
+    }
+    80% {
+      background-position: 0% 50%, 50% 50%, 100% 100%;
+    }
+  }

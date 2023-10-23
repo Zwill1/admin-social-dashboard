@@ -16,25 +16,40 @@ const Nav = () => {
   const handleClose = () => setNav(!nav);
   
   function toggleDarkMode(){
-    let getTag = document.querySelector("body");
-    getTag.classList.add("darkModeBG");
+    // sets body to dark mode
+    let getBodyTag = document.querySelector("body");
+    getBodyTag.classList.add("darkModeBody");
+
+    let mainHeadTag = document.getElementById("main-header");
+    mainHeadTag.classList.add("darkModeHeader");
+
+    // sets header to dark mode
+
+    // sets state to true
     SetDarkMode(true);
   } 
   function toggleLightMode(){
-    let getTag = document.querySelector("body");
-    getTag.classList.remove("darkModeBG");
+    // sets body to light mode
+    let getBodyTag = document.querySelector("body");
+    getBodyTag.classList.remove("darkModeBody");
+
+    // sets header to light mode
+    let mainHeadTag = document.getElementById("main-header");
+    mainHeadTag.classList.remove("darkModeHeader");
+
+    // sets state to false
     SetDarkMode(false);
   } 
 
   return (
     <>
-      <section className="bg-white text-black">
+      <section id="main-header" className="text-black">
         <div className="flex justify-between md:w-full h-14 w-10/12 mx-auto container items-center">
           <div>
             <h1 className="flex">
               <Link
                 to="/"
-                className="font-bold mr-4 text-2xl sm:text-3xl md:text-4xl uppercase text-black"
+                className="font-bold mr-4 text-2xl sm:text-3xl md:text-4xl uppercase"
               >
                 Social Dash
               </Link>

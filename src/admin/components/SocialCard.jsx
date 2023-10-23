@@ -40,9 +40,6 @@ export default function SocialCard({
 
   const { user } = useAuth();
 
-  //console.log("user " + user.avatar);
-
-
   return (
     <div className={headerStyle}>
       <div>
@@ -76,7 +73,7 @@ export default function SocialCard({
         <p className="uppercase tracking-widest">followers</p>
         <p>ID: {dataId}</p>
         {dataPrevFollowers && (
-          <p>
+          <>
             {totalAdjustedFollowers > 0 ? (
               <p className="positive-rating text-2xl">
                 +{totalAdjustedFollowers} from yesterday
@@ -86,7 +83,7 @@ export default function SocialCard({
                 {totalAdjustedFollowers} from yesterday
               </p>
             )}
-          </p>
+          </>
         )}
       </div>
     </div>

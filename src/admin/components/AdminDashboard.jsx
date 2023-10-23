@@ -4,11 +4,13 @@ import SocialCard from "./SocialCard";
 import useFetch from "../hooks/useFetch";
 import OverviewHeader from "./OverviewHeader";
 import OverviewCard from "./OverviewCard";
+import Loader from "../../ui/Loader";
 
 export default function AdminDashboard() {
   const {data, loading, error } = useFetch("src/admin/data/SocialData.json");
   // When getting data, set to "loading".
-  if (loading) return <h1>Loading data...</h1>;
+  // if (loading) return <h1>Loading data...</h1>;
+  if (loading) return <Loader />;
 
   if (data === null)
     return <div>No data available. Please try again later.</div>;

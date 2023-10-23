@@ -114,10 +114,10 @@ OverviewCard.propTypes = {
   width: PropTypes.string.isRequired,
   center: PropTypes.string.isRequired,
   dataId: PropTypes.number.isRequired,
-  pagelike: PropTypes.number.isRequired,
-  pageview: PropTypes.number.isRequired,
-  pageyesterdaylike: PropTypes.number.isRequired,
-  pageviewyesterday: PropTypes.number.isRequired,
+  pagelike: PropTypes.number,
+  pageview: PropTypes.number,
+  pageyesterdaylike: PropTypes.number,
+  pageviewyesterday: PropTypes.number,
   border: PropTypes.string.isRequired,
   bottom:PropTypes.string.isRequired
 }
