@@ -1,16 +1,9 @@
-import PropTypes from 'prop-types';
+export default function OverviewHeader() {
 
-export default function OverviewHeader({color}) {
-    const h2Header = "text-black text-3xl font-bold " + color;
-    const pHeaders = "italic text-sm " + color;
   return (
     <>
-    <h2 className={h2Header}>Overview - Today</h2>
-    <p className={pHeaders}>See below for social media counts</p>   
+      <h2 id="text-header2" className="text-3xl font-bold">Overview - Today</h2>
+      <p id="sub-header2" className="italic text-sm">See below for social media counts</p>   
   </>
   )
-}
-
-OverviewHeader.propTypes = {
-  color: PropTypes.string.isRequired
 }

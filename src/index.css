@@ -60,6 +60,14 @@
     color: #000;
 }
 
+.darkModeHeaderText {
+    color: #fff!important;
+}
+
+.darkModeSubText {
+    color: #fff!important;
+}
+
 .dark-mode-card-bg {
     background-color: #262b42;
 }

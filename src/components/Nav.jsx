@@ -24,6 +24,18 @@ const Nav = () => {
     mainHeadTag.classList.add("darkModeHeader");
 
     // sets header to dark mode
+    let textHeaderTag = document.getElementById("text-header");
+    textHeaderTag.classList.add("darkModeHeaderText");
+
+    let textSubHeaderTag = document.getElementById("sub-header");
+    textSubHeaderTag.classList.add("darkModeSubText");
+
+    let textHeaderTag2 = document.getElementById("text-header2");
+    textHeaderTag2.classList.add("darkModeHeaderText");
+
+    let textSubHeaderTag2 = document.getElementById("sub-header2");
+    textSubHeaderTag2.classList.add("darkModeSubText");
+
 
     // sets state to true
     SetDarkMode(true);
@@ -36,6 +48,18 @@ const Nav = () => {
     // sets header to light mode
     let mainHeadTag = document.getElementById("main-header");
     mainHeadTag.classList.remove("darkModeHeader");
+
+    let textHeaderTag = document.getElementById("text-header");
+    textHeaderTag.classList.remove("darkModeHeaderText");
+
+    let textSubHeaderTag = document.getElementById("sub-header");
+    textSubHeaderTag.classList.remove("darkModeSubText");
+
+    let textHeaderTag2 = document.getElementById("text-header2");
+    textHeaderTag2.classList.remove("darkModeHeaderText");
+
+    let textSubHeaderTag2 = document.getElementById("sub-header2");
+    textSubHeaderTag2.classList.remove("darkModeSubText");
 
     // sets state to false
     SetDarkMode(false);
