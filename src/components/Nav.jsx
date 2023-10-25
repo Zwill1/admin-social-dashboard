@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { useAuth } from "../contexts/AuthContext";
 
@@ -35,7 +36,6 @@ const Nav = () => {
 
     let textSubHeaderTag2 = document.getElementById("sub-header2");
     textSubHeaderTag2.classList.add("darkModeSubText");
-
 
     // sets state to true
     SetDarkMode(true);
@@ -103,7 +103,15 @@ const Nav = () => {
               ) : (
                 <>
                   <li className="p-4 flex">
-                      <img src={user.avatar} className='rounded-full mr-3' style={{"width" : "25px"}} /> <span className="font-bold">Welcome {user.name}</span>!
+                      <img src={user.avatar} className='rounded-full mr-3' style={{"width" : "25px"}} /> <span className="font-bold">Welcome {user.name}</span>! <ExpandMoreIcon />
+
+                      {/* placing in a dropdown menu on click. Use state to set the arrow */}
+                      <ul className="absolute w-[185px] bg-red-500 float-left text-center top-[50px] pt-1 pb-1">
+                        <li>one</li>
+                        <li>one</li>
+                        <li>one</li>
+                        <li>one</li>
+                      </ul>
                   </li>
                   {/* Adding dashboard to navigation if user goes back to homepage. */}
                   <li className="p-4">
