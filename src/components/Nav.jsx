@@ -9,12 +9,15 @@ import { useAuth } from "../contexts/AuthContext";
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
+  const [isDropDown, setDropDown] = useState(false);
   const { user, logout, isAuthenticated } = useAuth();
 
   const [darkMode, SetDarkMode] = useState(false);
 
   const handleClick = () => setNav(!nav);
   const handleClose = () => setNav(!nav);
+
+  const dropDownClick = () => setDropDown(!isDropDown);
   
   function toggleDarkMode(){
     // sets body to dark mode
@@ -102,27 +105,23 @@ const Nav = () => {
                 </>
               ) : (
                 <>
-                  <li className="p-4 flex">
+                  <li className="p-4 flex" onClick={dropDownClick}>
                       <img src={user.avatar} className='rounded-full mr-3' style={{"width" : "25px"}} /> <span className="font-bold">Welcome {user.name}</span>! <ExpandMoreIcon />
 
                       {/* placing in a dropdown menu on click. Use state to set the arrow */}
-                      <ul className="absolute w-[185px] bg-red-500 float-left text-center top-[50px] pt-1 pb-1">
-                        <li>one</li>
-                        <li>one</li>
-                        <li>one</li>
-                        <li>one</li>
-                      </ul>
-                  </li>
+                      <ul className={!isDropDown ? "hidden" : "absolute w-[185px] bg-gray-100 float-left text-center top-[50px] pt-1 pb-1" }>
                   {/* Adding dashboard to navigation if user goes back to homepage. */}
-                  <li className="p-4">
-                    <Link to="/dashboard" className="nav-link">
-                      Dashboard
-                    </Link>
-                  </li>
-                  <li className="p-4">
-                    <Link to="/" className="nav-link" onClick={logout}>
-                      Logout
-                    </Link>
+                        <li className="p-1">
+                          <Link to="/dashboard" className="nav-link">
+                            Dashboard
+                          </Link>
+                        </li>
+                        <li className="p-1">
+                          <Link to="/" className="nav-link" onClick={logout}>
+                            Logout
+                          </Link>
+                        </li>
+                      </ul>
                   </li>
                   {!darkMode ? (
                       <li className="p-4" onClick={toggleDarkMode}>Darkmode</li>
