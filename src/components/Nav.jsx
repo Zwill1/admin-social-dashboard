@@ -5,6 +5,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
+
 import { useAuth } from "../contexts/AuthContext";
 
 const Nav = () => {
@@ -93,9 +96,9 @@ const Nav = () => {
                     </Link>
                   </li>
                     {!darkMode ? (
-                      <li className="p-4" onClick={toggleDarkMode}>Darkmode</li>
+                      <li className="p-4" onClick={toggleDarkMode}><DarkModeIcon /></li>
                     ) : (
-                      <li className="p-4" onClick={toggleLightMode}>Lightmode</li>
+                      <li className="p-4" onClick={toggleLightMode}><LightModeIcon /></li>
                     )}
                   {/* <li className="p-4">
                     <Link to="/" className="nav-link">
@@ -124,9 +127,9 @@ const Nav = () => {
                       </ul>
                   </li>
                   {!darkMode ? (
-                      <li className="p-4" onClick={toggleDarkMode}>Darkmode</li>
+                      <li className="p-4" onClick={toggleDarkMode}><DarkModeIcon /></li>
                     ) : (
-                      <li className="p-4" onClick={toggleLightMode}>Lightmode</li>
+                      <li className="p-4" onClick={toggleLightMode}><LightModeIcon /></li>
                     )}
                 </>
               )}
