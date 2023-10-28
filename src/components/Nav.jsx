@@ -30,9 +30,19 @@ const Nav = () => {
     let mainHeadTag = document.getElementById("main-header");
     mainHeadTag.classList.add("darkModeHeader");
 
+    // sets state to true
+    SetDarkMode(true);
+
+    // need to manage all dark mode without grabbing with elements if possible. If element doesnt exist, it will be null
+
+
     // sets header to dark mode
     let textHeaderTag = document.getElementById("text-header");
-    textHeaderTag.classList.add("darkModeHeaderText");
+    if(textHeaderTag == null){
+      return;
+    }else {
+      textHeaderTag.classList.add("darkModeHeaderText");
+    }
 
     let textSubHeaderTag = document.getElementById("sub-header");
     textSubHeaderTag.classList.add("darkModeSubText");
@@ -42,9 +52,6 @@ const Nav = () => {
 
     let textSubHeaderTag2 = document.getElementById("sub-header2");
     textSubHeaderTag2.classList.add("darkModeSubText");
-
-    // sets state to true
-    SetDarkMode(true);
   } 
   function toggleLightMode(){
     // sets body to light mode
@@ -54,6 +61,9 @@ const Nav = () => {
     // sets header to light mode
     let mainHeadTag = document.getElementById("main-header");
     mainHeadTag.classList.remove("darkModeHeader");
+
+    // sets state to false
+    SetDarkMode(false);
 
     let textHeaderTag = document.getElementById("text-header");
     textHeaderTag.classList.remove("darkModeHeaderText");
@@ -67,8 +77,7 @@ const Nav = () => {
     let textSubHeaderTag2 = document.getElementById("sub-header2");
     textSubHeaderTag2.classList.remove("darkModeSubText");
 
-    // sets state to false
-    SetDarkMode(false);
+
   } 
 
   return (
