@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -9,82 +9,87 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 
 import { useAuth } from "../contexts/AuthContext";
+import { ThemeContext } from "../contexts/Theme";
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
   const [isDropDown, setDropDown] = useState(false);
   const { user, logout, isAuthenticated } = useAuth();
 
-  const [darkMode, SetDarkMode] = useState(false);
+  // const [darkMode, SetDarkMode] = useState(false);
 
   const handleClick = () => setNav(!nav);
   const handleClose = () => setNav(!nav);
 
   const dropDownClick = () => setDropDown(!isDropDown);
 
+  // Setting up proper dark mode
+  const [{theme, isDark}, toggleTheme] = useContext(ThemeContext);
+  console.log("theme", theme);
+
 
   
-  function toggleDarkMode(){
-    // sets body to dark mode
-    let getBodyTag = document.querySelector("body");
-    getBodyTag.classList.add("darkModeBody");
+  // function toggleDarkMode(){
+  //   // sets body to dark mode
+  //   let getBodyTag = document.querySelector("body");
+  //   getBodyTag.classList.add("darkModeBody");
 
-    let mainHeadTag = document.getElementById("main-header");
-    mainHeadTag.classList.add("darkModeHeader");
+  //   let mainHeadTag = document.getElementById("main-header");
+  //   mainHeadTag.classList.add("darkModeHeader");
 
-    // sets state to true
-    SetDarkMode(true);
+  //   // sets state to true
+  //   SetDarkMode(true);
 
-    // need to manage all dark mode without grabbing with elements if possible. If element doesnt exist, it will be null
-
-
-    // sets header to dark mode
-    let textHeaderTag = document.getElementById("text-header");
-    if(textHeaderTag == null){
-      return;
-    }else {
-      textHeaderTag.classList.add("darkModeHeaderText");
-    }
-
-    let textSubHeaderTag = document.getElementById("sub-header");
-    textSubHeaderTag.classList.add("darkModeSubText");
-
-    let textHeaderTag2 = document.getElementById("text-header2");
-    textHeaderTag2.classList.add("darkModeHeaderText");
-
-    let textSubHeaderTag2 = document.getElementById("sub-header2");
-    textSubHeaderTag2.classList.add("darkModeSubText");
-  } 
-  function toggleLightMode(){
-    // sets body to light mode
-    let getBodyTag = document.querySelector("body");
-    getBodyTag.classList.remove("darkModeBody");
-
-    // sets header to light mode
-    let mainHeadTag = document.getElementById("main-header");
-    mainHeadTag.classList.remove("darkModeHeader");
-
-    // sets state to false
-    SetDarkMode(false);
-
-    let textHeaderTag = document.getElementById("text-header");
-    textHeaderTag.classList.remove("darkModeHeaderText");
-
-    let textSubHeaderTag = document.getElementById("sub-header");
-    textSubHeaderTag.classList.remove("darkModeSubText");
-
-    let textHeaderTag2 = document.getElementById("text-header2");
-    textHeaderTag2.classList.remove("darkModeHeaderText");
-
-    let textSubHeaderTag2 = document.getElementById("sub-header2");
-    textSubHeaderTag2.classList.remove("darkModeSubText");
+  //   // need to manage all dark mode without grabbing with elements if possible. If element doesnt exist, it will be null
 
 
-  } 
+  //   // sets header to dark mode
+  //   let textHeaderTag = document.getElementById("text-header");
+  //   if(textHeaderTag == null){
+  //     return;
+  //   }else {
+  //     textHeaderTag.classList.add("darkModeHeaderText");
+  //   }
+
+  //   let textSubHeaderTag = document.getElementById("sub-header");
+  //   textSubHeaderTag.classList.add("darkModeSubText");
+
+  //   let textHeaderTag2 = document.getElementById("text-header2");
+  //   textHeaderTag2.classList.add("darkModeHeaderText");
+
+  //   let textSubHeaderTag2 = document.getElementById("sub-header2");
+  //   textSubHeaderTag2.classList.add("darkModeSubText");
+  // } 
+  // function toggleLightMode(){
+  //   // sets body to light mode
+  //   let getBodyTag = document.querySelector("body");
+  //   getBodyTag.classList.remove("darkModeBody");
+
+  //   // sets header to light mode
+  //   let mainHeadTag = document.getElementById("main-header");
+  //   mainHeadTag.classList.remove("darkModeHeader");
+
+  //   // sets state to false
+  //   SetDarkMode(false);
+
+  //   let textHeaderTag = document.getElementById("text-header");
+  //   textHeaderTag.classList.remove("darkModeHeaderText");
+
+  //   let textSubHeaderTag = document.getElementById("sub-header");
+  //   textSubHeaderTag.classList.remove("darkModeSubText");
+
+  //   let textHeaderTag2 = document.getElementById("text-header2");
+  //   textHeaderTag2.classList.remove("darkModeHeaderText");
+
+  //   let textSubHeaderTag2 = document.getElementById("sub-header2");
+  //   textSubHeaderTag2.classList.remove("darkModeSubText");
+
+
+  // } 
 
   return (
     <>
-      <section id="main-header" className="text-black">
+      <section id="main-header" style={{backgroundColor: theme.backgroundColor, color: theme.color}}>
         <div className="flex justify-between md:w-full h-14 w-10/12 mx-auto container items-center">
           <div>
             <h1 className="flex">
@@ -107,10 +112,16 @@ const Nav = () => {
                     </Link>
                   </li>
 
-                    {!darkMode ? (
+                    {/* {!darkMode ? (
                       <li className="p-4" onClick={toggleDarkMode}><DarkModeIcon /></li>
                     ) : (
                       <li className="p-4" onClick={toggleLightMode}><LightModeIcon /></li>
+                    )} */}
+
+                    {!isDark ? (
+                      <li className="p-4" onClick={toggleTheme}><DarkModeIcon /></li>
+                    ) : (
+                      <li className="p-4" onClick={toggleTheme}><LightModeIcon /></li>
                     )}
 
                   {/* <li className="p-4">
@@ -139,11 +150,20 @@ const Nav = () => {
                         </li>
                       </ul>
                   </li>
-                  {!darkMode ? (
+                  {/* {!darkMode ? (
                       <li className="p-4" onClick={toggleDarkMode}><DarkModeIcon /></li>
                     ) : (
                       <li className="p-4" onClick={toggleLightMode}><LightModeIcon /></li>
+                    )} */}
+
+                  {!isDark ? (
+                      <li className="p-4" onClick={toggleTheme}><DarkModeIcon /></li>
+                    ) : (
+                      <li className="p-4" onClick={toggleTheme}><LightModeIcon /></li>
                     )}
+
+                  {/* <li className="p-4">Its a {isDark ? "Dark" : "Light"} theme</li>
+                  <li><button onClick={toggleTheme}>Toggle Theme</button></li> */}
 
                 </>
               )}
