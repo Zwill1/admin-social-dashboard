@@ -21,6 +21,8 @@ const Nav = () => {
   const handleClose = () => setNav(!nav);
 
   const dropDownClick = () => setDropDown(!isDropDown);
+
+
   
   function toggleDarkMode(){
     // sets body to dark mode
@@ -104,11 +106,13 @@ const Nav = () => {
                       Home
                     </Link>
                   </li>
+
                     {!darkMode ? (
                       <li className="p-4" onClick={toggleDarkMode}><DarkModeIcon /></li>
                     ) : (
                       <li className="p-4" onClick={toggleLightMode}><LightModeIcon /></li>
                     )}
+
                   {/* <li className="p-4">
                     <Link to="/" className="nav-link">
                       Login
@@ -140,6 +144,7 @@ const Nav = () => {
                     ) : (
                       <li className="p-4" onClick={toggleLightMode}><LightModeIcon /></li>
                     )}
+
                 </>
               )}
             </ul>
