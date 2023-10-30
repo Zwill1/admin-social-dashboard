@@ -136,7 +136,7 @@ const Nav = () => {
                       <img src={user.avatar} className='rounded-full mr-3' style={{"width" : "25px"}} /> <span className="font-bold">Welcome {user.name}</span>! <ExpandMoreIcon />
 
                       {/* placing in a dropdown menu on click. Use state to set the arrow */}
-                      <ul className={!isDropDown ? "hidden" : "absolute w-[185px] bg-gray-100 float-left text-center top-[50px] pt-1 pb-1" }>
+                      <ul className={!isDropDown ? "hidden" : "absolute w-[185px] bg-gray-100 float-left text-center top-[50px] pt-1 pb-1" } style={{backgroundColor: theme.backgroundColor, color: theme.color}}>
                   {/* Adding dashboard to navigation if user goes back to homepage. */}
                         <li className="p-1">
                           <Link to="/dashboard" className="nav-link">
@@ -180,7 +180,7 @@ const Nav = () => {
         <ul
           className={
             !nav ? "hidden" : "absolute bg-zinc-200 w-full lg:hidden z-50"
-          }
+          } style={{backgroundColor: theme.backgroundColor, color: theme.color}}
         >
           {/* Changing nav text link based on if the user has logged in. Login if not login is authenticated. Logout if a user is logged in. logout link uses onclick from auth context for logout */}
           {!isAuthenticated ? (
