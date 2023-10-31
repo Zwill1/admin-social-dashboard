@@ -27,69 +27,9 @@ const Nav = () => {
   const [{theme, isDark}, toggleTheme] = useContext(ThemeContext);
   console.log("theme", theme);
 
-
-  
-  // function toggleDarkMode(){
-  //   // sets body to dark mode
-  //   let getBodyTag = document.querySelector("body");
-  //   getBodyTag.classList.add("darkModeBody");
-
-  //   let mainHeadTag = document.getElementById("main-header");
-  //   mainHeadTag.classList.add("darkModeHeader");
-
-  //   // sets state to true
-  //   SetDarkMode(true);
-
-  //   // need to manage all dark mode without grabbing with elements if possible. If element doesnt exist, it will be null
-
-
-  //   // sets header to dark mode
-  //   let textHeaderTag = document.getElementById("text-header");
-  //   if(textHeaderTag == null){
-  //     return;
-  //   }else {
-  //     textHeaderTag.classList.add("darkModeHeaderText");
-  //   }
-
-  //   let textSubHeaderTag = document.getElementById("sub-header");
-  //   textSubHeaderTag.classList.add("darkModeSubText");
-
-  //   let textHeaderTag2 = document.getElementById("text-header2");
-  //   textHeaderTag2.classList.add("darkModeHeaderText");
-
-  //   let textSubHeaderTag2 = document.getElementById("sub-header2");
-  //   textSubHeaderTag2.classList.add("darkModeSubText");
-  // } 
-  // function toggleLightMode(){
-  //   // sets body to light mode
-  //   let getBodyTag = document.querySelector("body");
-  //   getBodyTag.classList.remove("darkModeBody");
-
-  //   // sets header to light mode
-  //   let mainHeadTag = document.getElementById("main-header");
-  //   mainHeadTag.classList.remove("darkModeHeader");
-
-  //   // sets state to false
-  //   SetDarkMode(false);
-
-  //   let textHeaderTag = document.getElementById("text-header");
-  //   textHeaderTag.classList.remove("darkModeHeaderText");
-
-  //   let textSubHeaderTag = document.getElementById("sub-header");
-  //   textSubHeaderTag.classList.remove("darkModeSubText");
-
-  //   let textHeaderTag2 = document.getElementById("text-header2");
-  //   textHeaderTag2.classList.remove("darkModeHeaderText");
-
-  //   let textSubHeaderTag2 = document.getElementById("sub-header2");
-  //   textSubHeaderTag2.classList.remove("darkModeSubText");
-
-
-  // } 
-
   return (
     <>
-      <section id="main-header" style={{backgroundColor: theme.backgroundColor, color: theme.color}}>
+      <section  className={isDark ? "bg-black text-white" : "bg-gray-100 text-black"}>
         <div className="flex justify-between md:w-full h-14 w-10/12 mx-auto container items-center">
           <div>
             <h1 className="flex">
@@ -111,24 +51,11 @@ const Nav = () => {
                       Home
                     </Link>
                   </li>
-
-                    {/* {!darkMode ? (
-                      <li className="p-4" onClick={toggleDarkMode}><DarkModeIcon /></li>
-                    ) : (
-                      <li className="p-4" onClick={toggleLightMode}><LightModeIcon /></li>
-                    )} */}
-
                     {!isDark ? (
                       <li className="p-4" onClick={toggleTheme}><DarkModeIcon /></li>
                     ) : (
                       <li className="p-4" onClick={toggleTheme}><LightModeIcon /></li>
                     )}
-
-                  {/* <li className="p-4">
-                    <Link to="/" className="nav-link">
-                      Login
-                    </Link>
-                  </li> */}
                 </>
               ) : (
                 <>
@@ -150,21 +77,11 @@ const Nav = () => {
                         </li>
                       </ul>
                   </li>
-                  {/* {!darkMode ? (
-                      <li className="p-4" onClick={toggleDarkMode}><DarkModeIcon /></li>
-                    ) : (
-                      <li className="p-4" onClick={toggleLightMode}><LightModeIcon /></li>
-                    )} */}
-
                   {!isDark ? (
                       <li className="p-4" onClick={toggleTheme}><DarkModeIcon /></li>
                     ) : (
                       <li className="p-4" onClick={toggleTheme}><LightModeIcon /></li>
                     )}
-
-                  {/* <li className="p-4">Its a {isDark ? "Dark" : "Light"} theme</li>
-                  <li><button onClick={toggleTheme}>Toggle Theme</button></li> */}
-
                 </>
               )}
             </ul>
@@ -190,11 +107,6 @@ const Nav = () => {
                   Home
                 </Link>
               </li>
-              {/* <li className="border-b-2 border-zinc-300 w-full p-4">
-                <Link to="/login" onClick={handleClose}>
-                  Login
-                </Link>
-              </li> */}
             </>
           ) : (
             <>
