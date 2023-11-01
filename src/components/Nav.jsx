@@ -16,8 +16,6 @@ const Nav = () => {
   const [isDropDown, setDropDown] = useState(false);
   const { user, logout, isAuthenticated } = useAuth();
 
-  // const [darkMode, SetDarkMode] = useState(false);
-
   const handleClick = () => setNav(!nav);
   const handleClose = () => setNav(!nav);
 
