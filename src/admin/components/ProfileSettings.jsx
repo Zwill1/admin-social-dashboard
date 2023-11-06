@@ -1,5 +1,10 @@
 export default function ProfileSettings() {
   return (
-    <div>ProfileSettings</div>
+
+    <>
+        <section className="w-3/4">
+          <p>ProfileSettings</p>
+        </section>
+    </>
   )
 }

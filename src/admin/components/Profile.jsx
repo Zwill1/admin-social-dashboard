@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { ThemeContext } from "../../contexts/Theme"
 import ProfileSettings from "./ProfileSettings";
+import ProfileSideBar from "./ProfileSideBar";
 
 
 export default function Profile() {
@@ -9,8 +10,8 @@ export default function Profile() {
 
   return (
     <>
-        <main style={{backgroundColor: theme.backgroundColor, color: theme.color}}>
-            <p>profile</p>
+        <main style={{backgroundColor: theme.backgroundColor, color: theme.color}} className="flex">
+            <ProfileSideBar />
             <ProfileSettings />
         </main>
     </>

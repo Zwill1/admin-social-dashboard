@@ -27,7 +27,7 @@ const Nav = () => {
 
   return (
     <>
-      <section  className={isDark ? "bg-black text-white" : "bg-gray-100 text-black"}>
+      <section className={isDark ? "bg-black text-white" : "bg-gray-100 text-black"}>
         <div className="flex justify-between md:w-full h-14 w-10/12 mx-auto container items-center">
           <div>
             <h1 className="flex">
