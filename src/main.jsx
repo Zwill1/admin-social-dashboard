@@ -12,6 +12,7 @@ import Home from './pages/Home.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from './contexts/Theme';
+import AppProfileLayout from './admin/pages/AppProfileLayout.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -30,6 +31,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                   element={
                     <ProtectedRoute>
                       <AppLayout />
+                    </ProtectedRoute>
+                  }
+                />
+                {/* Admin protected route. Cant do this in 6.0 as protected route doesnt exist yet. AppLayout is displayed when login is successful */}
+                <Route
+                  path="profile"
+                  element={
+                    <ProtectedRoute>
+                      <AppProfileLayout />
                     </ProtectedRoute>
                   }
                 />
