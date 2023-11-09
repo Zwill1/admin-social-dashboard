@@ -12,7 +12,6 @@ import Home from './pages/Home.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from './contexts/Theme';
-import AppProfileLayout from './admin/pages/AppProfileLayout.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -32,9 +31,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                     <ProtectedRoute>
                       <AppLayout />
                     </ProtectedRoute>
-                  }
-                />
-                {/* Admin protected route. Cant do this in 6.0 as protected route doesnt exist yet. AppLayout is displayed when login is successful */}
+                  } />
+
+
+                {/* Admin protected route. Cant do this in 6.0 as protected route doesnt exist yet. AppLayout is displayed when login is successful
                 <Route
                   path="profile"
                   element={
@@ -42,7 +42,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                       <AppProfileLayout />
                     </ProtectedRoute>
                   }
-                />
+                >
+                  <Route path="account" element={<AccountSettings />} />
+                </Route> */}
+
+
                 {/* Other routes that do not exist go to page not found */}
                 <Route path="*" element={<Layout />}>
                   <Route path="*" element={<PageNotFound />} />

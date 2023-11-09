@@ -68,11 +68,11 @@ const Nav = () => {
                             Dashboard
                           </Link>
                         </li>
-                        <li className="p-1">
+                        {/* <li className="p-1">
                           <Link to="/profile" className="nav-link">
                             Profile
                           </Link>
-                        </li>
+                        </li> */}
                         <li className="p-1">
                           <Link to="/" className="nav-link" onClick={logout}>
                             Logout
@@ -122,11 +122,11 @@ const Nav = () => {
                   Dashboard
                 </Link>
               </li>
-              <li className="border-b-2 border-zinc-300 w-10/12 mx-auto pt-4 pb-4">
+              {/* <li className="border-b-2 border-zinc-300 w-10/12 mx-auto pt-4 pb-4">
                 <Link to="/profile" onClick={handleClose}>
                   Profile
                 </Link>
-              </li>
+              </li> */}
               <li className="border-b-2 border-zinc-300 w-10/12 mx-auto pt-4 pb-4">
                 <Link to="/" onClick={logout}>
                   Logout
